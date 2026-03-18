@@ -1,0 +1,19 @@
+[
+  { "cat": "SAP-MM",           "kanji": "購買",          "reading": "こうばい",          "meaning": "Purchasing / Procurement",        "context": "MM purchasing process or department" },
+  { "cat": "SAP-MM",           "kanji": "品目",           "reading": "ひんもく",          "meaning": "Material / Item",                 "context": "Product or goods master" },
+  { "cat": "SAP-SD",           "kanji": "販売組織",       "reading": "はんばいそしき",    "meaning": "Sales Organization",              "context": "SD org structure unit" },
+  { "cat": "SAP-SD",           "kanji": "受注先",         "reading": "じゅちゅうさき",    "meaning": "Sold-to Party",                   "context": "Customer placing the order" },
+  { "cat": "SAP-SD",           "kanji": "二次店",         "reading": "にじてん",          "meaning": "Secondary customer / reseller",   "context": "Indirect customer layer (custom field ZA)" },
+  { "cat": "SAP-SD",           "kanji": "相手先",         "reading": "あいてさき",        "meaning": "Business partner",                "context": "Customer or vendor depending on context" },
+  { "cat": "SAP-Security",     "kanji": "ロールの方針",   "reading": "ロールのほうしん",  "meaning": "Role policy / approach",          "context": "Authorization design strategy" },
+  { "cat": "SAP-Security",     "kanji": "ロール設計",     "reading": "ロールせっけい",    "meaning": "Role design",                     "context": "Authorization role structure" },
+  { "cat": "Project",          "kanji": "結合テスト",     "reading": "けつごうテスト",    "meaning": "Integration test",                "context": "System integration testing phase" },
+  { "cat": "Project",          "kanji": "移行関連",       "reading": "いこうかんれん",    "meaning": "Migration-related",               "context": "Data or system migration items" },
+  { "cat": "Project",          "kanji": "移行関係",       "reading": "いこうかんけい",    "meaning": "Migration-related / relationship", "context": "Migration tasks and connections" },
+  { "cat": "Project",          "kanji": "移行環境",       "reading": "いこうかんきょう",  "meaning": "Migration environment",           "context": "Environment for migration activities" },
+  { "cat": "Project",          "kanji": "確認事項",       "reading": "かくにんじこう",    "meaning": "Points to confirm",               "context": "Discussion or verification items in meeting" },
+  { "cat": "Project",          "kanji": "共有事項",       "reading": "きょうゆうじこう",  "meaning": "Items to share",                  "context": "Information sharing in team" },
+  { "cat": "General Business", "kanji": "登録",           "reading": "とうろく",          "meaning": "Register / Create entry",         "context": "System or data registration" },
+  { "cat": "General Business", "kanji": "認識して",       "reading": "にんしきして",      "meaning": "Recognize / Understand",          "context": "Awareness of issue or situation" },
+  { "cat": "General Business", "kanji": "承知しています", "reading": "しょうちしています","meaning": "Understood / Noted",              "context": "Polite acknowledgment" }
+]
