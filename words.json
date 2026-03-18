@@ -16,4 +16,12 @@
   { "cat": "General Business", "kanji": "登録",           "reading": "とうろく",          "meaning": "Register / Create entry",         "context": "System or data registration" },
   { "cat": "General Business", "kanji": "認識して",       "reading": "にんしきして",      "meaning": "Recognize / Understand",          "context": "Awareness of issue or situation" },
   { "cat": "General Business", "kanji": "承知しています", "reading": "しょうちしています","meaning": "Understood / Noted",              "context": "Polite acknowledgment" }
-]
+{ "cat": "General Business", "kanji": "周知しています", "reading": "しゅうちしています", "meaning": "Informed / Shared", "context": "Communicated to stakeholders" },
+{ "cat": "General Business", "kanji": "なるべく", "reading": "なるべく", "meaning": "As much as possible", "context": "Soft request or best effort" },
+{ "cat": "General Business", "kanji": "合わせると", "reading": "あわせると", "meaning": "When combined / Altogether", "context": "Total after combining" },
+{ "cat": "General Business", "kanji": "全体的な", "reading": "ぜんたいてきな", "meaning": "Overall / As a whole", "context": "Big-picture perspective" },
+{ "cat": "General Business", "kanji": "数値的に", "reading": "すうちてきに", "meaning": "Numerically", "context": "Data-based evaluation" },
+{ "cat": "General Business", "kanji": "無理くり", "reading": "むりくり", "meaning": "Forcibly / Unnaturally", "context": "Workaround or forced adjustment" },
+{ "cat": "General Business", "kanji": "都合の", "reading": "つごうの", "meaning": "For convenience / Due to circumstances", "context": "Convenience-based reasoning" },
+{ "cat": "General Business", "kanji": "通常の", "reading": "つうじょうの", "meaning": "Normal / Standard", "context": "Default process or situation" },
+{ "cat": "General Business", "kanji": "より", "reading": "より", "meaning": "Than / Compared to", "context": "Used for comparison" },]
