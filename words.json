@@ -24,5 +24,24 @@
   { "cat": "General Business", "kanji": "無理くり",        "reading": "むりくり",           "meaning": "Forcibly / Unnaturally",           "context": "Workaround or forced adjustment" },
   { "cat": "General Business", "kanji": "都合の",          "reading": "つごうの",           "meaning": "For convenience / Due to circumstances", "context": "Convenience-based reasoning" },
   { "cat": "General Business", "kanji": "通常の",          "reading": "つうじょうの",       "meaning": "Normal / Standard",                "context": "Default process or situation" },
-  { "cat": "General Business", "kanji": "より",            "reading": "より",               "meaning": "Than / Compared to",               "context": "Used for comparison" }
+  { "cat": "General Business", "kanji": "より",            "reading": "より",               "meaning": "Than / Compared to",               "context": "Used for comparison" },
+  { "cat": "General Business", "kanji": "確認しておきます", "reading": "かくにんしておきます", "meaning": "I will check in advance", "context": "[Project] Proactive confirmation before action" },
+  { "cat": "General Business", "kanji": "ほぼ", "reading": "ほぼ", "meaning": "Almost/Nearly", "context": "[General] Status nearly complete" },
+  { "cat": "SAP-SD", "kanji": "価格販売", "reading": "かかくはんばい", "meaning": "Price-based selling", "context": "[SD] Sales with fixed pricing" },
+  { "cat": "SAP-SD", "kanji": "価格管理", "reading": "かかくかんり", "meaning": "Pricing management", "context": "[SD] Sales pricing control" },
+  { "cat": "SAP-MM", "kanji": "品目登録", "reading": "ひんもくとうろく", "meaning": "Material creation", "context": "[MM] Create new material master" },
+  { "cat": "SAP-MM", "kanji": "品目変更", "reading": "ひんもくへんこう", "meaning": "Material change", "context": "[MM] Update material master" },
+  { "cat": "SAP-MM", "kanji": "品目照会", "reading": "ひんもくしょうかい", "meaning": "Material display", "context": "[MM] View material details" },
+  { "cat": "SAP-SD", "kanji": "品目価格変更", "reading": "ひんもくかかくへんこう", "meaning": "Price change", "context": "[SD] Update pricing conditions" },
+  { "cat": "SAP-MM", "kanji": "品目原価", "reading": "ひんもくげんか", "meaning": "Material cost", "context": "[CO] Cost of material" },
+  { "cat": "SAP-MM", "kanji": "原価構成", "reading": "げんかこうせい", "meaning": "Cost structure", "context": "[CO] Cost breakdown" },
+  { "cat": "SAP-MM", "kanji": "積上済BOM", "reading": "つみあげずみボム", "meaning": "BOM roll-up", "context": "[MM] Accumulated BOM structure" },
+  { "cat": "SAP-MM", "kanji": "改訂レベル割当", "reading": "かいていレベルわりあて", "meaning": "Revision assignment", "context": "[MM] Version control" },
+  { "cat": "SAP-MM", "kanji": "品目別複製", "reading": "ひんもくべつふくせい", "meaning": "Copy by material", "context": "[MM] Duplicate material data" },
+  { "cat": "Project", "kanji": "明細化", "reading": "めいさいか", "meaning": "Detailed breakdown", "context": "[Project] Data itemization" },
+  { "cat": "SAP-MM", "kanji": "品目送信", "reading": "ひんもくそうしん", "meaning": "Data send", "context": "[INT] Transfer data between systems" },
+  { "cat": "SAP-MM", "kanji": "品目取得", "reading": "ひんもくしゅとく", "meaning": "Data retrieval", "context": "[INT] Fetch data" },
+  { "cat": "SAP-MM", "kanji": "品目マスタのALE", "reading": "ひんもくマスタのALE", "meaning": "ALE distribution", "context": "[INT] Data distribution between systems" },
+  { "cat": "General Business", "kanji": "Appl. Log の分析", "reading": "アプリログのぶんせき", "meaning": "Log analysis", "context": "[INT] Analyze application logs" }
 ]
+
