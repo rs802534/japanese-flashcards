@@ -20,52 +20,117 @@
 }
 body{background:var(--deep);color:var(--text);font-family:'Cinzel',serif;min-height:100vh;overflow-x:hidden;position:relative;}
 
+/* SKY */
 .bg-sky{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:radial-gradient(ellipse 100% 60% at 50% 0%,#0a2a5a,transparent 70%),
-    radial-gradient(ellipse 80% 50% at 0% 50%,#0d3a1a,transparent 60%),
-    radial-gradient(ellipse 80% 50% at 100% 50%,#0d3a1a,transparent 60%),
-    radial-gradient(ellipse 60% 40% at 50% 100%,#1b5e20,transparent 60%),
-    linear-gradient(180deg,#020c18 0%,#041825 40%,#0d3a1a 100%);}
+  background:
+    radial-gradient(ellipse 100% 55% at 50% 0%,#0a2a5a,transparent 70%),
+    radial-gradient(ellipse 80% 50% at 0% 60%,#0d3a1a,transparent 60%),
+    radial-gradient(ellipse 80% 50% at 100% 60%,#0d3a1a,transparent 60%),
+    radial-gradient(ellipse 60% 40% at 50% 100%,#1b5e20,transparent 55%),
+    linear-gradient(180deg,#020c18 0%,#041825 35%,#062010 100%);}
 
+/* STARS */
 .bg-stars{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:radial-gradient(1px 1px at 10% 15%,#ffe066cc,transparent),
-    radial-gradient(1px 1px at 25% 8%,#fff8,transparent),
-    radial-gradient(1px 1px at 40% 20%,#ffe06699,transparent),
-    radial-gradient(1px 1px at 55% 5%,#fff6,transparent),
-    radial-gradient(1px 1px at 70% 12%,#ffe066aa,transparent),
-    radial-gradient(1px 1px at 82% 18%,#fff7,transparent),
-    radial-gradient(2px 2px at 35% 10%,#ffe066ee,transparent),
-    radial-gradient(2px 2px at 75% 6%,#fffaaa,transparent);}
+  background-image:
+    radial-gradient(1px 1px at 8% 12%,#ffe066cc,transparent),
+    radial-gradient(1px 1px at 22% 7%,#fff9,transparent),
+    radial-gradient(1px 1px at 38% 18%,#ffe06688,transparent),
+    radial-gradient(1px 1px at 52% 4%,#fff6,transparent),
+    radial-gradient(1px 1px at 68% 14%,#ffe066bb,transparent),
+    radial-gradient(1px 1px at 80% 9%,#fff7,transparent),
+    radial-gradient(1px 1px at 91% 20%,#ffe06677,transparent),
+    radial-gradient(2px 2px at 33% 9%,#ffe066ff,transparent),
+    radial-gradient(2px 2px at 72% 5%,#fffccc,transparent),
+    radial-gradient(1px 1px at 15% 28%,#fff4,transparent),
+    radial-gradient(1px 1px at 58% 22%,#ffe06655,transparent);}
 
+/* GOLDEN GLOW */
 .bg-glow{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:radial-gradient(ellipse 50% 40% at 50% 65%,#ffe06612,transparent 60%);}
+  background:radial-gradient(ellipse 45% 35% at 50% 60%,#ffe06610,transparent 65%);}
 
-.bg-trees{position:fixed;bottom:0;left:0;right:0;z-index:0;pointer-events:none;}
+/* VRINDAVAN TREES */
+.bg-trees{position:fixed;bottom:0;left:0;right:0;z-index:1;pointer-events:none;}
 
-.petals{position:fixed;inset:0;z-index:1;pointer-events:none;overflow:hidden;}
+/* COW IMAGE — fixed bottom left and right */
+.cow-left{
+  position:fixed;bottom:0;left:0;z-index:2;pointer-events:none;
+  width:140px;height:auto;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+  opacity:0.85;
+}
+.cow-right{
+  position:fixed;bottom:0;right:0;z-index:2;pointer-events:none;
+  width:120px;height:auto;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,0.5)) scaleX(-1);
+  transform:scaleX(-1);
+  opacity:0.75;
+}
+
+/* PETALS */
+.petals{position:fixed;inset:0;z-index:3;pointer-events:none;overflow:hidden;}
 .petal{position:absolute;top:-30px;animation:fall linear infinite;}
-@keyframes fall{0%{transform:translateY(-30px) rotate(0deg) translateX(0);opacity:0;}8%{opacity:1;}90%{opacity:0.6;}100%{transform:translateY(110vh) rotate(720deg) translateX(50px);opacity:0;}}
+@keyframes fall{
+  0%{transform:translateY(-30px) rotate(0deg) translateX(0);opacity:0;}
+  8%{opacity:1;}90%{opacity:0.6;}
+  100%{transform:translateY(110vh) rotate(720deg) translateX(50px);opacity:0;}}
 
-.app{position:relative;z-index:2;max-width:720px;margin:0 auto;padding:20px 16px 80px;}
+/* APP */
+.app{position:relative;z-index:4;max-width:720px;margin:0 auto;padding:20px 16px 100px;}
 
-.topbar{text-align:center;margin-bottom:20px;padding:20px 16px 16px;
-  background:rgba(4,24,37,0.75);backdrop-filter:blur(14px);border-radius:18px;
-  border:1px solid rgba(255,224,102,0.25);
-  box-shadow:0 4px 30px rgba(0,0,0,0.4),0 0 40px rgba(255,224,102,0.05);
-  position:relative;overflow:hidden;}
+/* HEADER */
+.topbar{
+  text-align:center;margin-bottom:20px;padding:0 16px 16px;
+  background:rgba(4,24,37,0.78);backdrop-filter:blur(14px);
+  border-radius:20px;border:1px solid rgba(255,224,102,0.3);
+  box-shadow:0 4px 30px rgba(0,0,0,0.5),0 0 50px rgba(255,224,102,0.06);
+  position:relative;overflow:hidden;
+}
 .topbar::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,transparent,var(--gold2),var(--sky),var(--gold2),transparent);}
+.topbar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--blue3),transparent);opacity:0.4;}
 
-.logo-main{font-family:'Cinzel',serif;font-size:22px;font-weight:700;
+/* Krishna image in header */
+.krishna-img-wrap{
+  position:relative;margin:0 auto;width:160px;height:180px;
+  display:flex;align-items:flex-end;justify-content:center;
+}
+.krishna-img{
+  width:160px;height:180px;object-fit:contain;object-position:center bottom;
+  filter:drop-shadow(0 0 20px rgba(255,202,40,0.5)) drop-shadow(0 0 40px rgba(13,71,161,0.4));
+  position:relative;z-index:1;
+}
+/* golden halo behind krishna */
+.krishna-halo{
+  position:absolute;top:10px;left:50%;transform:translateX(-50%);
+  width:130px;height:130px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,224,102,0.25) 0%,rgba(255,202,40,0.1) 40%,transparent 70%);
+  z-index:0;
+}
+/* mor pankh decoration above image */
+.header-feathers{
+  display:flex;justify-content:center;gap:6px;padding:12px 0 4px;
+}
+.feather{font-size:18px;opacity:0.7;animation:sway 3s ease-in-out infinite;}
+.feather:nth-child(2){animation-delay:0.3s;}
+.feather:nth-child(3){animation-delay:0.6s;}
+@keyframes sway{0%,100%{transform:rotate(-5deg);}50%{transform:rotate(5deg);}}
+
+.logo-main{
+  font-family:'Cinzel',serif;font-size:22px;font-weight:700;
   background:linear-gradient(135deg,var(--gold1) 0%,var(--gold2) 40%,var(--sky) 70%,var(--gold1) 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  letter-spacing:4px;line-height:1.2;margin-bottom:3px;}
-.logo-sub{font-size:9px;letter-spacing:4px;color:var(--muted);opacity:0.8;}
+  letter-spacing:4px;line-height:1.2;margin-bottom:4px;
+}
+.logo-sub{font-size:9px;letter-spacing:4px;color:var(--muted);opacity:0.75;margin-bottom:4px;}
 .om-deco{font-size:16px;margin:0 6px;opacity:0.7;}
 
-.streak-bar{display:flex;align-items:center;justify-content:center;
+/* STREAK BAR */
+.streak-bar{
+  display:flex;align-items:center;justify-content:center;
   background:rgba(4,24,37,0.65);backdrop-filter:blur(10px);
-  border:1px solid rgba(255,224,102,0.2);border-radius:50px;padding:10px 20px;margin-bottom:16px;
+  border:1px solid rgba(255,224,102,0.2);border-radius:50px;
+  padding:10px 20px;margin-bottom:16px;
   box-shadow:0 2px 20px rgba(0,0,0,0.3);}
 .streak-col{text-align:center;padding:0 18px;}
 .streak-num{font-family:'Cinzel',serif;font-size:22px;line-height:1;}
@@ -75,9 +140,13 @@ body{background:var(--deep);color:var(--text);font-family:'Cinzel',serif;min-hei
 .streak-label{font-size:9px;color:var(--muted);margin-top:2px;letter-spacing:1px;}
 .streak-div{width:1px;height:36px;background:rgba(255,224,102,0.2);}
 
-.wotd{background:rgba(4,24,37,0.72);backdrop-filter:blur(12px);
-  border:1px solid rgba(255,202,40,0.3);border-radius:16px;padding:16px 18px;margin-bottom:16px;
-  position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.35);}
+/* WORD OF THE DAY */
+.wotd{
+  background:rgba(4,24,37,0.75);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,202,40,0.3);border-radius:16px;
+  padding:16px 18px;margin-bottom:16px;
+  position:relative;overflow:hidden;
+  box-shadow:0 4px 24px rgba(0,0,0,0.4);}
 .wotd::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,transparent,var(--gold2),transparent);}
 .wotd-badge{display:inline-block;font-size:9px;letter-spacing:3px;
@@ -94,8 +163,11 @@ body{background:var(--deep);color:var(--text);font-family:'Cinzel',serif;min-hei
   border-top:1px solid rgba(255,224,102,0.15);padding-top:8px;
   font-family:'Noto Serif JP',serif;font-style:italic;}
 
-.filter-wrap{background:rgba(4,24,37,0.65);backdrop-filter:blur(10px);
-  border:1px solid rgba(255,224,102,0.15);border-radius:14px;padding:12px 14px;margin-bottom:14px;}
+/* FILTER WRAP */
+.filter-wrap{
+  background:rgba(4,24,37,0.65);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,224,102,0.15);border-radius:14px;
+  padding:12px 14px;margin-bottom:14px;}
 .filter-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;}
 .filter-label{font-size:9px;letter-spacing:2px;color:var(--faint);margin-right:4px;}
 .cat-btn{background:rgba(13,71,161,0.3);border:1px solid rgba(255,224,102,0.2);
@@ -111,6 +183,7 @@ body{background:var(--deep);color:var(--text);font-family:'Cinzel',serif;min-hei
 .ctrl-btn:hover{border-color:var(--gold2);color:var(--gold1);}
 .ctrl-btn.on{background:linear-gradient(135deg,var(--green1),var(--green3));border-color:var(--leaf);color:#fff;}
 
+/* PROGRESS */
 .prog-wrap{background:rgba(4,24,37,0.6);backdrop-filter:blur(8px);
   border:1px solid rgba(255,224,102,0.12);border-radius:12px;padding:10px 14px;margin-bottom:14px;}
 .prog-row{display:flex;align-items:center;gap:8px;margin-bottom:5px;}
@@ -119,21 +192,24 @@ body{background:var(--deep);color:var(--text);font-family:'Cinzel',serif;min-hei
 .prog-track{flex:1;height:5px;background:rgba(255,255,255,0.05);border-radius:5px;overflow:hidden;}
 .prog-fill{height:100%;border-radius:5px;
   background:linear-gradient(90deg,var(--blue1),var(--sky),var(--gold2));
-  box-shadow:0 0 8px rgba(66,165,245,0.5);transition:width 0.6s ease;}
+  box-shadow:0 0 8px rgba(66,165,245,0.4);transition:width 0.6s ease;}
 .prog-count{width:30px;text-align:right;font-size:9px;color:var(--muted);}
 
+/* COUNTER */
 .counter{text-align:center;font-size:11px;letter-spacing:3px;color:var(--faint);margin-bottom:14px;}
 .counter span{font-size:16px;color:var(--gold2);text-shadow:0 0 8px var(--gold3);}
 
+/* CARD */
 .card-area{perspective:1400px;margin-bottom:14px;cursor:pointer;}
 .card-3d{position:relative;width:100%;transform-style:preserve-3d;transition:transform 0.65s cubic-bezier(0.23,1,0.32,1);}
 .card-3d.flipped{transform:rotateY(180deg);}
-.card-face{backface-visibility:hidden;-webkit-backface-visibility:hidden;
+.card-face{
+  backface-visibility:hidden;-webkit-backface-visibility:hidden;
   background:rgba(4,24,37,0.85);backdrop-filter:blur(16px);
   border:1px solid rgba(255,202,40,0.3);border-radius:18px;padding:36px 28px;
   min-height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;
   position:relative;overflow:hidden;
-  box-shadow:0 8px 40px rgba(0,0,0,0.5),inset 0 0 40px rgba(13,71,161,0.1);
+  box-shadow:0 8px 40px rgba(0,0,0,0.5),inset 0 0 40px rgba(13,71,161,0.08);
   transition:border-color 0.2s,box-shadow 0.2s;}
 .card-face::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;border-radius:18px 18px 0 0;
   background:linear-gradient(90deg,transparent,var(--gold2),var(--sky),var(--gold2),transparent);}
@@ -142,17 +218,18 @@ body{background:var(--deep);color:var(--text);font-family:'Cinzel',serif;min-hei
 .card-cat{position:absolute;top:14px;left:14px;font-size:9px;letter-spacing:2px;color:var(--gold2);opacity:0.7;}
 .card-hint{position:absolute;bottom:12px;right:14px;font-size:10px;color:var(--faint);letter-spacing:1px;}
 .known-badge{position:absolute;top:12px;right:12px;font-size:9px;padding:2px 10px;border-radius:20px;
-  background:linear-gradient(135deg,var(--green1),var(--green3));color:#fff;display:none;
-  box-shadow:0 2px 8px rgba(46,125,79,0.4);}
+  background:linear-gradient(135deg,var(--green1),var(--green3));color:#fff;display:none;}
 .card-face.is-known .known-badge{display:block;}
 
-.peacock-eye{position:absolute;opacity:0.12;}
+/* peacock eye corners */
+.pe{position:absolute;opacity:0.13;width:22px;height:22px;}
 .pe-tl{top:10px;left:12px;}
 .pe-br{bottom:10px;right:12px;transform:rotate(180deg);}
 
 .furigana-wrap{display:flex;flex-direction:column;align-items:center;margin-bottom:8px;}
 .furigana-text{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:300;
-  color:var(--sky);letter-spacing:5px;text-align:center;text-shadow:0 0 8px rgba(66,165,245,0.4);}
+  color:var(--sky);letter-spacing:5px;text-align:center;
+  text-shadow:0 0 8px rgba(66,165,245,0.4);}
 .kanji-main{font-family:'Noto Serif JP',serif;font-size:68px;font-weight:700;
   background:linear-gradient(135deg,var(--gold1) 0%,#fff 40%,var(--gold2) 70%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
@@ -172,8 +249,10 @@ body{background:var(--deep);color:var(--text);font-family:'Cinzel',serif;min-hei
   background:rgba(13,71,161,0.2);border-radius:10px;padding:8px 14px;
   border-left:2px solid var(--gold2);max-width:400px;font-family:'Noto Serif JP',serif;}
 
-.flip-hint{text-align:center;font-size:10px;letter-spacing:2px;color:var(--gold2);opacity:0.5;margin-bottom:10px;}
+.flip-hint{text-align:center;font-size:10px;letter-spacing:2px;
+  color:var(--gold2);opacity:0.5;margin-bottom:10px;}
 
+/* ACTIONS */
 .actions{display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap;}
 .act-btn{background:rgba(4,24,37,0.7);backdrop-filter:blur(8px);
   border:1px solid rgba(255,224,102,0.2);padding:10px 16px;font-family:'Cinzel',serif;
@@ -202,123 +281,65 @@ body{background:var(--deep);color:var(--text);font-family:'Cinzel',serif;min-hei
 </style>
 </head>
 <body>
+
+<!-- BACKGROUNDS -->
 <div class="bg-sky"></div>
 <div class="bg-stars"></div>
 <div class="bg-glow"></div>
 
-<!-- Vrindavan Trees -->
+<!-- VRINDAVAN TREES -->
 <div class="bg-trees">
 <svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" style="width:100%;display:block;">
   <rect x="0" y="175" width="800" height="25" fill="#1b5e20" opacity="0.5"/>
-  <rect x="40" y="100" width="14" height="80" rx="4" fill="#0a0600" opacity="0.6"/>
-  <rect x="120" y="75" width="16" height="105" rx="4" fill="#0a0600" opacity="0.6"/>
-  <rect x="210" y="88" width="13" height="92" rx="4" fill="#0a0600" opacity="0.6"/>
-  <rect x="580" y="82" width="15" height="98" rx="4" fill="#0a0600" opacity="0.6"/>
-  <rect x="660" y="72" width="16" height="108" rx="4" fill="#0a0600" opacity="0.6"/>
-  <rect x="740" y="88" width="13" height="92" rx="4" fill="#0a0600" opacity="0.6"/>
-  <ellipse cx="47" cy="88" rx="42" ry="52" fill="#1b5e20" opacity="0.8"/>
-  <ellipse cx="47" cy="76" rx="33" ry="42" fill="#2e7d32" opacity="0.65"/>
-  <ellipse cx="47" cy="68" rx="24" ry="30" fill="#388e3c" opacity="0.5"/>
-  <ellipse cx="128" cy="64" rx="50" ry="58" fill="#1b5e20" opacity="0.85"/>
-  <ellipse cx="128" cy="52" rx="38" ry="46" fill="#2e7d32" opacity="0.7"/>
-  <ellipse cx="128" cy="43" rx="26" ry="33" fill="#43a047" opacity="0.5"/>
-  <ellipse cx="216" cy="76" rx="44" ry="50" fill="#1b5e20" opacity="0.78"/>
-  <ellipse cx="216" cy="63" rx="33" ry="38" fill="#2e7d32" opacity="0.62"/>
-  <ellipse cx="588" cy="70" rx="48" ry="55" fill="#1b5e20" opacity="0.85"/>
-  <ellipse cx="588" cy="58" rx="36" ry="44" fill="#2e7d32" opacity="0.7"/>
-  <ellipse cx="588" cy="48" rx="25" ry="31" fill="#43a047" opacity="0.5"/>
-  <ellipse cx="668" cy="58" rx="52" ry="60" fill="#1b5e20" opacity="0.85"/>
-  <ellipse cx="668" cy="45" rx="40" ry="48" fill="#2e7d32" opacity="0.7"/>
-  <ellipse cx="668" cy="36" rx="28" ry="34" fill="#388e3c" opacity="0.55"/>
-  <ellipse cx="746" cy="74" rx="42" ry="52" fill="#1b5e20" opacity="0.78"/>
-  <ellipse cx="746" cy="62" rx="31" ry="40" fill="#2e7d32" opacity="0.62"/>
-  <ellipse cx="400" cy="188" rx="160" ry="10" fill="#1565c0" opacity="0.2"/>
-  <ellipse cx="400" cy="185" rx="70" ry="15" fill="#ffe066" opacity="0.04"/>
+  <rect x="40"  y="100" width="14" height="78" rx="4" fill="#080400" opacity="0.6"/>
+  <rect x="120" y="76"  width="16" height="102" rx="4" fill="#080400" opacity="0.6"/>
+  <rect x="210" y="88"  width="13" height="90" rx="4" fill="#080400" opacity="0.6"/>
+  <rect x="580" y="82"  width="15" height="96" rx="4" fill="#080400" opacity="0.6"/>
+  <rect x="660" y="72"  width="16" height="106" rx="4" fill="#080400" opacity="0.6"/>
+  <rect x="740" y="88"  width="13" height="90" rx="4" fill="#080400" opacity="0.6"/>
+  <ellipse cx="47"  cy="88"  rx="42" ry="52" fill="#1b5e20" opacity="0.82"/>
+  <ellipse cx="47"  cy="76"  rx="33" ry="42" fill="#2e7d32" opacity="0.68"/>
+  <ellipse cx="47"  cy="67"  rx="23" ry="30" fill="#388e3c" opacity="0.5"/>
+  <ellipse cx="128" cy="64"  rx="50" ry="58" fill="#1b5e20" opacity="0.85"/>
+  <ellipse cx="128" cy="52"  rx="38" ry="46" fill="#2e7d32" opacity="0.7"/>
+  <ellipse cx="128" cy="42"  rx="26" ry="33" fill="#43a047" opacity="0.52"/>
+  <ellipse cx="216" cy="76"  rx="44" ry="50" fill="#1b5e20" opacity="0.8"/>
+  <ellipse cx="216" cy="63"  rx="33" ry="38" fill="#2e7d32" opacity="0.64"/>
+  <ellipse cx="588" cy="70"  rx="48" ry="55" fill="#1b5e20" opacity="0.85"/>
+  <ellipse cx="588" cy="58"  rx="36" ry="44" fill="#2e7d32" opacity="0.7"/>
+  <ellipse cx="588" cy="48"  rx="25" ry="31" fill="#43a047" opacity="0.52"/>
+  <ellipse cx="668" cy="58"  rx="52" ry="60" fill="#1b5e20" opacity="0.85"/>
+  <ellipse cx="668" cy="45"  rx="40" ry="48" fill="#2e7d32" opacity="0.7"/>
+  <ellipse cx="668" cy="36"  rx="28" ry="34" fill="#388e3c" opacity="0.55"/>
+  <ellipse cx="746" cy="74"  rx="42" ry="52" fill="#1b5e20" opacity="0.8"/>
+  <ellipse cx="746" cy="62"  rx="31" ry="40" fill="#2e7d32" opacity="0.64"/>
+  <ellipse cx="400" cy="188" rx="160" ry="10" fill="#1565c0" opacity="0.18"/>
 </svg>
 </div>
 
+<!-- COWS — bottom corners -->
+<img src="cow.jpg" class="cow-left" alt="cow" onerror="this.style.display='none'">
+<img src="cow.jpg" class="cow-right" alt="cow" onerror="this.style.display='none'">
+
+<!-- PETALS -->
 <div class="petals" id="petals"></div>
 
 <div class="app">
 
-  <!-- HEADER -->
+  <!-- HEADER with real Krishna image -->
   <div class="topbar">
-    <svg width="130" height="115" viewBox="0 0 130 115" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 10px;">
-      <!-- Stars background -->
-      <circle cx="15" cy="10" r="1" fill="#ffe066" opacity="0.6"/>
-      <circle cx="110" cy="8" r="0.8" fill="#fff" opacity="0.5"/>
-      <circle cx="25" cy="25" r="0.7" fill="#ffe066" opacity="0.4"/>
-      <circle cx="105" cy="20" r="1" fill="#fff" opacity="0.4"/>
-      <circle cx="8" cy="40" r="0.8" fill="#42a5f5" opacity="0.5"/>
-      <circle cx="118" cy="35" r="0.7" fill="#ffe066" opacity="0.5"/>
-      <!-- Golden halo / prabhamandal -->
-      <ellipse cx="65" cy="50" rx="38" ry="46" fill="none" stroke="#ffe066" stroke-width="0.6" opacity="0.2"/>
-      <ellipse cx="65" cy="50" rx="30" ry="37" fill="none" stroke="#ffe066" stroke-width="0.4" opacity="0.15"/>
-      <!-- Mor mukut (peacock crown) feathers -->
-      <ellipse cx="65" cy="10" rx="5" ry="12" fill="#1e88e5" opacity="0.75"/>
-      <ellipse cx="55" cy="11" rx="3.5" ry="9" fill="#1565c0" opacity="0.6" transform="rotate(-18 55 11)"/>
-      <ellipse cx="75" cy="11" rx="3.5" ry="9" fill="#1565c0" opacity="0.6" transform="rotate(18 75 11)"/>
-      <ellipse cx="46" cy="14" rx="3" ry="7" fill="#0d47a1" opacity="0.5" transform="rotate(-30 46 14)"/>
-      <ellipse cx="84" cy="14" rx="3" ry="7" fill="#0d47a1" opacity="0.5" transform="rotate(30 84 14)"/>
-      <!-- Feather eyes -->
-      <circle cx="65" cy="5" r="2.5" fill="#ffe066" opacity="0.85"/>
-      <circle cx="65" cy="5" r="1.2" fill="#0d47a1" opacity="0.9"/>
-      <circle cx="55" cy="6" r="1.8" fill="#ffe066" opacity="0.7"/>
-      <circle cx="75" cy="6" r="1.8" fill="#ffe066" opacity="0.7"/>
-      <!-- Crown band -->
-      <rect x="50" y="18" width="30" height="5" rx="2" fill="#ffe066" opacity="0.5"/>
-      <!-- Head -->
-      <ellipse cx="65" cy="30" rx="13" ry="14" fill="#1565c0" opacity="0.8"/>
-      <!-- Face highlight -->
-      <ellipse cx="65" cy="28" rx="9" ry="10" fill="#1e88e5" opacity="0.4"/>
-      <!-- Body / pitambar (yellow dhoti top) -->
-      <path d="M53 42 Q42 58 44 80 Q52 92 65 93 Q78 92 86 80 Q88 58 77 42 Z" fill="#0d47a1" opacity="0.85"/>
-      <!-- Pitambar shine -->
-      <path d="M58 44 Q55 60 56 78" stroke="#1e88e5" stroke-width="1" fill="none" opacity="0.3"/>
-      <!-- Vanamala (flower garland) -->
-      <path d="M54 43 Q65 48 76 43" stroke="#ffe066" stroke-width="1.5" fill="none" opacity="0.6"/>
-      <circle cx="58" cy="45" r="1.5" fill="#ffe066" opacity="0.5"/>
-      <circle cx="65" cy="48" r="1.5" fill="#ff8a65" opacity="0.5"/>
-      <circle cx="72" cy="45" r="1.5" fill="#ffe066" opacity="0.5"/>
-      <!-- Dhoti flowing (yellow) -->
-      <path d="M46 76 Q40 96 44 110 Q54 114 65 114 Q76 114 86 110 Q90 96 84 76 Z" fill="#1565c0" opacity="0.65"/>
-      <path d="M50 78 Q46 94 48 108" stroke="#ffe066" stroke-width="0.8" fill="none" opacity="0.25"/>
-      <!-- Pitambar yellow cloth hint -->
-      <path d="M62 76 Q58 90 60 108 L70 108 Q72 90 68 76 Z" fill="#ffe066" opacity="0.15"/>
-      <!-- Left arm holding bansuri -->
-      <path d="M53 45 Q38 54 30 60 Q28 62 31 64 Q35 58 50 51 Z" fill="#1565c0" opacity="0.8"/>
-      <!-- Right arm raised elegantly -->
-      <path d="M77 45 Q90 52 96 58 Q98 61 96 63 Q92 58 78 52 Z" fill="#1565c0" opacity="0.8"/>
-      <!-- Bansuri (flute) — golden -->
-      <rect x="27" y="57" width="46" height="3.5" rx="1.8" fill="#ffe066" opacity="0.9" transform="rotate(-10 27 57)"/>
-      <!-- Finger holes on bansuri -->
-      <circle cx="36" cy="58" r="1" fill="#0d47a1" opacity="0.6" transform="rotate(-10 36 58)"/>
-      <circle cx="42" cy="57" r="1" fill="#0d47a1" opacity="0.6" transform="rotate(-10 42 57)"/>
-      <circle cx="48" cy="56" r="1" fill="#0d47a1" opacity="0.6" transform="rotate(-10 48 56)"/>
-      <circle cx="54" cy="55" r="1" fill="#0d47a1" opacity="0.6" transform="rotate(-10 54 55)"/>
-      <!-- Musical notes -->
-      <text x="96" y="50" font-size="9" fill="#ffe066" opacity="0.6" font-family="serif">♪</text>
-      <text x="103" y="40" font-size="7" fill="#42a5f5" opacity="0.5" font-family="serif">♫</text>
-      <text x="90" y="34" font-size="8" fill="#ffe066" opacity="0.4" font-family="serif">♩</text>
-      <!-- Peacock (mor) beside Krishna -->
-      <ellipse cx="105" cy="85" rx="11" ry="7" fill="#1e88e5" opacity="0.55"/>
-      <ellipse cx="105" cy="78" rx="7" ry="6" fill="#1565c0" opacity="0.65"/>
-      <!-- Peacock tail feathers -->
-      <path d="M98 75 Q93 62 95 56 Q97 53 99 57 Q98 64 100 72 Z" fill="#1b5e20" opacity="0.55"/>
-      <path d="M105" cy="75" Q103 60 105 54 Q107 51 108 55 Q107 62 107 72 Z" fill="#2e7d32" opacity="0.5"/>
-      <path d="M112 75 Q115 62 113 55 Q111 52 110 56 Q111 63 110 72 Z" fill="#43a047" opacity="0.55"/>
-      <circle cx="95" cy="57" r="2" fill="#ffe066" opacity="0.4"/>
-      <circle cx="105" cy="54" r="2" fill="#ffe066" opacity="0.4"/>
-      <circle cx="113" cy="56" r="2" fill="#ffe066" opacity="0.4"/>
-      <!-- Peacock body -->
-      <ellipse cx="105" cy="92" rx="5" ry="10" fill="#0d47a1" opacity="0.55"/>
-      <!-- Kadamba tree hint behind -->
-      <circle cx="12" cy="55" r="18" fill="#1b5e20" opacity="0.3"/>
-      <circle cx="12" cy="45" r="12" fill="#2e7d32" opacity="0.25"/>
-      <rect x="10" y="65" width="4" height="30" rx="2" fill="#0a0600" opacity="0.3"/>
-      <!-- Yamuna water hint at bottom -->
-      <ellipse cx="65" cy="112" rx="45" ry="4" fill="#1565c0" opacity="0.2"/>
-    </svg>
+    <div class="header-feathers">
+      <span class="feather">🦚</span>
+      <span class="feather">🪷</span>
+      <span class="feather">🦚</span>
+    </div>
+    <div class="krishna-img-wrap">
+      <div class="krishna-halo"></div>
+      <img src="krishna.jpg" class="krishna-img" alt="Shri Krishna"
+        onerror="this.style.display='none';document.getElementById('krishna-fallback').style.display='block'">
+      <!-- fallback if image not found -->
+      <div id="krishna-fallback" style="display:none;font-size:60px;margin-bottom:8px;">🙏</div>
+    </div>
     <div class="logo-main"><span class="om-deco">ॐ</span> कृष्ण फ्लैश <span class="om-deco">ॐ</span></div>
     <div class="logo-sub">KRISHNA FLASH · SAP JAPANESE VOCABULARY · VRINDAVAN</div>
   </div>
@@ -335,9 +356,9 @@ body{background:var(--deep);color:var(--text);font-family:'Cinzel',serif;min-hei
   <!-- WORD OF THE DAY -->
   <div class="wotd">
     <div class="wotd-badge">🦚 WORD OF THE DAY · आज का शब्द 🦚</div>
-    <div class="wotd-kanji" id="wotd-kanji">—</div>
-    <div class="wotd-reading" id="wotd-reading"></div>
-    <div class="wotd-meaning" id="wotd-meaning"></div>
+    <div class="wotd-kanji"    id="wotd-kanji">—</div>
+    <div class="wotd-reading"  id="wotd-reading"></div>
+    <div class="wotd-meaning"  id="wotd-meaning"></div>
     <div class="wotd-sentence" id="wotd-sentence"></div>
   </div>
 
@@ -356,6 +377,7 @@ body{background:var(--deep);color:var(--text);font-family:'Cinzel',serif;min-hei
   <div class="prog-wrap"><div id="cat-progress"></div></div>
   <div class="counter" id="counter"></div>
 
+  <!-- CARD -->
   <div class="card-area" id="card-area">
     <div class="loading"><span>🦚 Loading...</span></div>
   </div>
@@ -363,46 +385,59 @@ body{background:var(--deep);color:var(--text);font-family:'Cinzel',serif;min-hei
   <div class="flip-hint" id="flip-hint">✦ tap card to reveal meaning ✦</div>
 
   <div class="actions">
-    <button class="act-btn btn-nav" onclick="navigate(-1)">◀ Prev</button>
-    <button class="act-btn btn-speak" id="btn-speak" onclick="speakCard()">♪ Listen</button>
-    <button class="act-btn btn-known" onclick="markKnown()">✓ Known</button>
+    <button class="act-btn btn-nav"      onclick="navigate(-1)">◀ Prev</button>
+    <button class="act-btn btn-speak"    id="btn-speak" onclick="speakCard()">♪ Listen</button>
+    <button class="act-btn btn-known"    onclick="markKnown()">✓ Known</button>
     <button class="act-btn btn-learning" onclick="markLearning()">✕ Learning</button>
-    <button class="act-btn btn-nav" onclick="navigate(1)">Next ▶</button>
+    <button class="act-btn btn-nav"      onclick="navigate(1)">Next ▶</button>
   </div>
 
   <div class="kb-hint">
-    <span>←→</span> navigate &nbsp;<span>Space</span> flip &nbsp;<span>K</span> known &nbsp;<span>X</span> learning &nbsp;<span>S</span> speak
+    <span>←→</span> navigate &nbsp;
+    <span>Space</span> flip &nbsp;
+    <span>K</span> known &nbsp;
+    <span>X</span> learning &nbsp;
+    <span>S</span> speak
   </div>
+
 </div>
 
 <script>
 if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
 
+/* Falling petals + leaves + gold stars */
 const ITEMS=[
   '<svg width="10" height="20" viewBox="0 0 10 20"><ellipse cx="5" cy="10" rx="4" ry="9" fill="#1e88e5" opacity="0.7"/><ellipse cx="5" cy="6" rx="2" ry="4" fill="#42a5f5" opacity="0.6"/><circle cx="5" cy="4" r="2" fill="#ffe066" opacity="0.8"/></svg>',
   '<svg width="13" height="13" viewBox="0 0 13 13"><ellipse cx="6.5" cy="6.5" rx="5.5" ry="3.5" fill="#43a047" opacity="0.65" transform="rotate(-20 6.5 6.5)"/></svg>',
   '<svg width="11" height="11" viewBox="0 0 11 11"><ellipse cx="5.5" cy="5.5" rx="4.5" ry="3" fill="#66bb6a" opacity="0.6" transform="rotate(30 5.5 5.5)"/></svg>',
+  '<svg width="9" height="9" viewBox="0 0 9 9"><path d="M4.5 1L5.4 3.5H8L5.9 5 6.7 7.5 4.5 6 2.3 7.5 3.1 5 1 3.5H3.6Z" fill="#ffe066" opacity="0.5"/></svg>',
   '<svg width="8" height="14" viewBox="0 0 8 14"><ellipse cx="4" cy="7" rx="3" ry="6" fill="#1565c0" opacity="0.65"/><circle cx="4" cy="3" r="2" fill="#ffe066" opacity="0.7"/></svg>',
-  '<svg width="10" height="10" viewBox="0 0 10 10"><path d="M5 1L6.2 4H9.5L6.8 5.9 7.9 9 5 7.1 2.1 9 3.2 5.9.5 4H3.8Z" fill="#ffe066" opacity="0.45"/></svg>',
+  '<svg width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="4" fill="#ff8a65" opacity="0.45"/><circle cx="5" cy="5" r="2" fill="#ffe066" opacity="0.5"/></svg>',
 ];
 function spawnItem(){
   const el=document.createElement('div');el.className='petal';
   el.innerHTML=ITEMS[Math.floor(Math.random()*ITEMS.length)];
-  el.style.left=Math.random()*100+'vw';el.style.opacity=(0.4+Math.random()*0.6).toString();
-  const dur=9+Math.random()*14;el.style.animationDuration=dur+'s';el.style.animationDelay=(Math.random()*dur)+'s';
-  el.style.transform='scale('+(0.6+Math.random()*1)+')';
-  document.getElementById('petals').appendChild(el);setTimeout(()=>el.remove(),(dur+3)*1000);
+  el.style.left=Math.random()*100+'vw';
+  el.style.opacity=(0.4+Math.random()*0.6).toString();
+  const dur=9+Math.random()*13;
+  el.style.animationDuration=dur+'s';
+  el.style.animationDelay=(Math.random()*dur)+'s';
+  el.style.transform='scale('+(0.6+Math.random()*1.1)+')';
+  document.getElementById('petals').appendChild(el);
+  setTimeout(()=>el.remove(),(dur+3)*1000);
 }
-for(let i=0;i<14;i++) setTimeout(()=>spawnItem(),i*600);
-setInterval(spawnItem,2000);
+for(let i=0;i<16;i++) setTimeout(()=>spawnItem(),i*500);
+setInterval(spawnItem,1800);
 
+/* Streak */
 function loadStreak(){
   const today=new Date().toISOString().slice(0,10);
   let d=JSON.parse(localStorage.getItem('krishna-streak')||'{"streak":0,"last":""}');
   const yest=new Date();yest.setDate(yest.getDate()-1);
   if(d.last===today) return d.streak;
-  d.streak=d.last===yest.toISOString().slice(0,10)?d.streak+1:1;d.last=today;
-  localStorage.setItem('krishna-streak',JSON.stringify(d));return d.streak;
+  d.streak=d.last===yest.toISOString().slice(0,10)?d.streak+1:1;
+  d.last=today;localStorage.setItem('krishna-streak',JSON.stringify(d));
+  return d.streak;
 }
 document.getElementById('streak-num').textContent=loadStreak();
 
@@ -438,7 +473,8 @@ function buildCatBtns(){
   el.querySelectorAll('.cat-btn:not([data-cat="ALL"])').forEach(b=>b.remove());
   cats.forEach(cat=>{
     const btn=document.createElement('button');btn.className='cat-btn';btn.dataset.cat=cat;btn.textContent=cat;
-    btn.addEventListener('click',()=>{document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');currentCat=cat;currentIdx=0;render();});
     el.insertBefore(btn,ctrl);
   });
@@ -467,13 +503,12 @@ function buildProgress(){
   });
 }
 
-const PEACOCK=`<svg width="22" height="22" viewBox="0 0 22 22"><ellipse cx="11" cy="11" rx="9" ry="9" fill="none" stroke="#ffe066" stroke-width="0.5" opacity="0.5"/><ellipse cx="11" cy="11" rx="5" ry="7" fill="#1e88e5" opacity="0.2"/><circle cx="11" cy="11" r="2.5" fill="#ffe066" opacity="0.3"/><circle cx="11" cy="11" r="1.2" fill="#1565c0" opacity="0.6"/></svg>`;
+const PE=`<svg class="pe" viewBox="0 0 22 22"><ellipse cx="11" cy="11" rx="9" ry="9" fill="none" stroke="#ffe066" stroke-width="0.5" opacity="0.6"/><ellipse cx="11" cy="11" rx="5" ry="7" fill="#1e88e5" opacity="0.25"/><circle cx="11" cy="11" r="2.5" fill="#ffe066" opacity="0.35"/><circle cx="11" cy="11" r="1.2" fill="#1565c0" opacity="0.7"/></svg>`;
 
 function cardHTML(){
   return `<div class="card-3d" id="card-3d">
     <div class="card-face" id="card-front">
-      <div class="peacock-eye pe-tl">${PEACOCK}</div>
-      <div class="peacock-eye pe-br">${PEACOCK}</div>
+      <div class="pe pe-tl">${PE}</div><div class="pe pe-br">${PE}</div>
       <div class="card-cat" id="front-cat"></div>
       <div class="known-badge">✓ Known</div>
       <div class="furigana-wrap"><div class="furigana-text" id="front-furigana"></div></div>
@@ -481,8 +516,7 @@ function cardHTML(){
       <div class="card-hint">tap to reveal ✦</div>
     </div>
     <div class="card-face card-back" id="card-back">
-      <div class="peacock-eye pe-tl">${PEACOCK}</div>
-      <div class="peacock-eye pe-br">${PEACOCK}</div>
+      <div class="pe pe-tl">${PE}</div><div class="pe pe-br">${PE}</div>
       <div class="card-cat" id="back-cat"></div>
       <div class="back-kanji-small" id="back-kanji-small"></div>
       <div class="back-hira" id="back-hira"></div>
@@ -500,7 +534,7 @@ function render(){
   document.getElementById('stat-known').textContent=knownSet.size;
   document.getElementById('stat-total').textContent=ALL_CARDS.length;
   const area=document.getElementById('card-area');
-  if(!deck.length){area.innerHTML='<div class="empty-state">🦚 No cards in this filter</div>';document.getElementById('counter').innerHTML='';buildProgress();return;}
+  if(!deck.length){area.innerHTML='<div class="empty-state">🦚 No cards</div>';document.getElementById('counter').innerHTML='';buildProgress();return;}
   if(!area.querySelector('.card-3d')){area.innerHTML=cardHTML();area.onclick=flipCard;}
   const card=deck[currentIdx],known=knownSet.has(getKey(card));
   isFlipped=false;document.getElementById('card-3d').classList.remove('flipped');
@@ -521,7 +555,8 @@ function render(){
 
 function flipCard(){
   if(!deck.length||!document.getElementById('card-3d')) return;
-  isFlipped=!isFlipped;document.getElementById('card-3d').classList.toggle('flipped',isFlipped);
+  isFlipped=!isFlipped;
+  document.getElementById('card-3d').classList.toggle('flipped',isFlipped);
   document.getElementById('flip-hint').textContent=isFlipped?'✦ tap to flip back ✦':'✦ tap card to reveal meaning ✦';
 }
 function navigate(dir){if(!deck.length) return;currentIdx=(currentIdx+dir+deck.length)%deck.length;render();}
@@ -533,21 +568,26 @@ function flashCard(col,shadow){
 function markKnown(){if(!deck.length) return;knownSet.add(getKey(deck[currentIdx]));learningSet.delete(getKey(deck[currentIdx]));flashCard('#66bb6a','rgba(46,125,79,0.5)');setTimeout(()=>navigate(1),340);}
 function markLearning(){if(!deck.length) return;learningSet.add(getKey(deck[currentIdx]));knownSet.delete(getKey(deck[currentIdx]));flashCard('#ef5350','rgba(183,28,28,0.5)');render();}
 function speakCard(){
-  if(!deck.length) return;const card=deck[currentIdx];const btn=document.getElementById('btn-speak');
+  if(!deck.length) return;
+  const card=deck[currentIdx],btn=document.getElementById('btn-speak');
   if(!('speechSynthesis' in window)){btn.textContent='No TTS';return;}
   window.speechSynthesis.cancel();
-  const utt=new SpeechSynthesisUtterance(card.kanji+'。'+card.reading);utt.lang='ja-JP';utt.rate=0.8;
+  const utt=new SpeechSynthesisUtterance(card.kanji+'。'+card.reading);
+  utt.lang='ja-JP';utt.rate=0.8;
   btn.classList.add('speaking');btn.textContent='♪ Playing';
   utt.onend=utt.onerror=()=>{btn.classList.remove('speaking');btn.textContent='♪ Listen';};
   window.speechSynthesis.speak(utt);
 }
 document.getElementById('btn-shuffle').addEventListener('click',function(){
   for(let i=ALL_CARDS.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[ALL_CARDS[i],ALL_CARDS[j]]=[ALL_CARDS[j],ALL_CARDS[i]];}
-  currentIdx=0;this.style.background='linear-gradient(135deg,#0d47a1,#ffe066)';this.style.color='#fff';this.style.borderColor='transparent';
-  setTimeout(()=>{this.style.background='';this.style.color='';this.style.borderColor='';},600);render();
+  currentIdx=0;
+  this.style.background='linear-gradient(135deg,#0d47a1,#ffe066)';this.style.color='#fff';this.style.borderColor='transparent';
+  setTimeout(()=>{this.style.background='';this.style.color='';this.style.borderColor='';},600);
+  render();
 });
 document.getElementById('btn-hide-known').addEventListener('click',function(){
-  hideKnown=!hideKnown;this.classList.toggle('on',hideKnown);this.textContent=hideKnown?'Show All':'Hide Known';currentIdx=0;render();
+  hideKnown=!hideKnown;this.classList.toggle('on',hideKnown);
+  this.textContent=hideKnown?'Show All':'Hide Known';currentIdx=0;render();
 });
 document.addEventListener('keydown',e=>{
   if(['INPUT','TEXTAREA'].includes(document.activeElement.tagName)) return;
